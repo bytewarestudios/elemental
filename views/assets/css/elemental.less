@@ -1,0 +1,383 @@
+@teal:teal;
+@accordionHeaderTextColor:#ffffff;
+@backgroundColor:#DBDFDE;
+@buttonFontColor:black;
+@buttonColor:#DBDFDE;
+@borderRadius:15px;
+
+
+
+
+body{
+    
+background-color:@teal;
+
+}
+
+.eraser-mode-on{
+    
+    background-color:black !important;
+    color:#ffffff !important;
+    
+}
+
+
+/* styling for the draggable elements */
+.element-container .draggable{
+    
+   background-color:@buttonColor;
+   color: #006699;
+   font-family:georgia;
+   height:32px;
+   margin-left:15px;
+   border:white solid 1px;
+   -moz-border-radius:@borderRadius;
+   border-radius:@borderRadius;
+   -webkit-border-radius:@borderRadius;
+   padding-left:5px;
+   padding-right:5px;
+   border:solid aqua 2px;
+   
+    
+    
+}
+
+.button{
+   
+   
+   background-color:@buttonColor;
+   color: #006699;
+   font-family:georgia;
+   height:32px;
+   margin-left:15px;
+   border:white solid 1px;
+   -moz-border-radius:@borderRadius;
+   border-radius:@borderRadius;
+   -webkit-border-radius:@borderRadius;
+   padding-left:5px;
+   padding-right:5px;
+   border:solid aqua 2px;
+   
+   
+   
+   
+}
+
+
+
+
+
+.ui-tabs-anchor{
+
+background-color:@teal;
+text-align:center;
+color:@accordionHeaderTextColor;
+font-family:Segoe Print;
+text-decoration:none;
+}
+.ui-tabs-nav li{
+    
+    list-style-type:none;
+    display:inline-block;
+    border-top:white solid 1px;
+    border-left:white solid 1px;
+    border-right:white solid 1px;
+    padding-left:5px;
+    padding-right:5px;
+    border-top-left-radius:5px;
+    -moz-border-top-left-radius:5px;
+    -webkit-border-top-left-radius:5px;
+     border-top-right-radius:5px;
+    -moz-border-top-right-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    
+   
+    
+}
+
+.ui-tabs-panel{
+    
+    height:auto;
+    overflow-y:scroll;
+    
+}
+
+
+    
+    
+
+
+
+#edit-menu-title{
+
+font-family:Segoe Print;
+color:#ffffff;
+
+}
+
+
+
+#cssEditor,#show-code{
+    
+    
+    height:320px;
+    width: 100%;
+   
+    resize:none;
+    
+}
+
+#cssEditor{
+ 
+ border:black solid 2px;
+ 
+ 
+ background-position: top right;
+ background-repeat: no-repeat;
+
+}
+#show-code{
+
+
+background-color:#000000;
+color:#FFFFFF;
+background-position: top right;
+background-repeat: no-repeat;
+}
+#elemental-edit-menu form{
+
+width: 400px; 
+display: block;
+margin: 0 auto;
+
+}
+
+.element-container{
+
+
+padding-top:5px;
+padding-left:5px;
+padding-right:5px;
+background-color:@teal;
+
+
+}
+.element-container li{
+    
+    display:inline-block;
+    margin-bottom:8px;
+    
+}
+.edit-form-options li{
+
+list-style-type:none;
+padding-left:5px;
+padding-right:5px;
+padding-bottom:8px;
+background-color:@teal;
+display:inline-block;
+
+
+}
+.edit-form-options ul{
+    
+    
+}
+
+
+.edit-form-options > p{
+margin:0px;
+}
+.preview-container{
+
+
+background-image: url(../img/previewcontainerbackground.png);
+ background-position: top right;
+ background-repeat: no-repeat;
+
+background-color:#FFFFFF;
+border:black solid 1px;
+height:430px;
+overflow:auto;
+
+
+}
+#elemental-edit-menu form{
+
+padding-left:5px;
+
+
+}
+
+#elemental-edit-menu{
+
+
+
+
+}
+
+#elemental-edit-menu label{
+  
+  /*code below is too align the labels with the input text boxes*/
+  text-align:right;
+  padding-right:10px;
+  display:inline-block;
+  min-width:150px;
+
+}
+
+
+
+
+.edit-button{
+
+
+}
+.hide{
+
+visibility:hidden;
+height:0px;
+width:0px;
+padding:0px;
+
+}
+
+
+/* highlight class */
+.highlight{
+
+ background-color:blue;
+ color:white;
+ 
+
+}
+
+#code{
+
+display:none;
+height:0px;
+width:0px;
+
+
+}
+
+
+#edit-menu-title{
+
+text-align:center;
+
+}
+#close-edit-form-button{
+display:none;
+}
+
+
+/*Begin Media Query Section*/
+
+	/* Custom, iPhone Retina */ 
+	@media only screen and (max-width : 320px ) {/*begin media query*/
+            
+            
+             #elemental-edit-menu form{
+
+             display: inline;
+             margin: 0 0;
+             
+	    
+               }
+
+            #elemental-edit-menu form input{
+ 
+             width:100%;
+
+          }
+
+        #elemental-edit-menu form label{
+          
+          
+          text-align:left;
+          
+      }
+
+
+
+#elemental-edit-menu form select{
+ 
+             width:100%;
+             text-align:center;
+
+          }
+          
+          .button{
+            
+             display: block;
+             text-align:center;
+           
+              
+          }
+          
+          
+/* styling for the draggable elements */
+.element-container .draggable{
+    
+   
+}
+
+     
+                        
+	}/*end media query*/
+
+	/* Extra Small Devices, Phones */ 
+	@media only screen and (max-width : 480px ) and (min-width : 320px ){/*begin media query*/
+            
+         .button{
+              
+              display: block;
+              text-align:center;
+           
+              
+          }
+          
+          
+          /* styling for the draggable elements */
+.element-container .draggable{
+   
+}
+            
+           
+	}/*end media query*/
+        
+        
+
+	/* Small Devices, Tablets */
+	@media only screen and (max-width : 768px) and (min-width : 480px){/*begin media query*/
+            
+           
+            
+            .button{
+              
+              display: block;
+              text-align:center;
+           
+              
+          }
+            
+
+	}/*end media query*/
+
+	/* Medium Devices, Desktops */
+	@media only screen and (max-width : 992px) and (min-width : 768px){/*begin media query*/
+            
+            
+              
+ 
+
+	}/*end media query*/
+
+	/* Large Devices, Wide Screens */
+	@media only screen and (min-width : 992px){/*begin media query*/
+     
+            
+            
+	}/*end media query*/
+        

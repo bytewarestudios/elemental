@@ -1,0 +1,450 @@
+/* 
+    Document   : responder
+    Created on : Jul 23, 2014, 5:40:04 AM
+    Revised on:  Aug 21, 2014
+    Author     : Larry J. Lane
+    Description: Responder is a repsonsive stylesheet based on row and column
+    design. 
+        
+*/
+
+
+
+html,body{    
+     
+    /*needed to keep footer fixed to the bottom of the page*/
+    height:100%;
+    margin:0;
+    
+}
+
+
+ #header{
+           
+        max-width:100%;
+        width:100%;
+       
+        
+          /*<header height>set the height of the header*/
+          height:40px;
+        
+        /*styling below prevents padding and borders from breaking
+       the max-width setting of the columns*/
+       -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+       -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+        
+        
+ }
+ 
+ /* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  
+  
+  /* Negative indent footer by its height */
+  margin-top:0;
+  margin-left:auto; 
+  margin-right:auto;
+  margin-bottom:-40px;/*<footer height 2> change margin-bottom when changing footer height must be negative number*/
+  
+  
+  /* Pad bottom by footer height */
+  padding-left:0;
+  padding-right:0;
+  padding-top:0;
+  padding-bottom:40px; /* <footer height 3> change padding-bottom when changing footer height must be positive number*/
+}
+ 
+ 
+ #footer{
+           
+        max-width:100%;
+        width:100%; 
+        
+        height:40px; /*<footer height 1> sets height of footer is dependant on settings footer height 2 & 3 */
+        
+        
+        /*styling below prevents padding and borders from breaking
+       the max-width setting of the columns*/
+       -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+       -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+        
+        
+ }
+ /*styling used to remove left margin from .nav-horizontal undordered list*/
+ .nav-horizontal{
+     
+     
+     padding-left:0px;
+     margin-left:0px;
+     margin-top:0px;
+     margin-bottom:0px;
+     
+ }
+ 
+ /*styling for .nav-horizontal ul li list items*/
+ .nav-horizontal li{
+    
+   
+    padding-left:5px;
+    padding-right:5px;   
+    display:table-cell;
+    list-style-type:none;/*remove the bullet styling*/
+    
+ }
+ .nav-horizontal li a{
+     
+   
+    text-decoration:none;
+    
+ }
+ 
+ /*set the styling for the mobile-menu*/
+ 
+ .mobile-menu li:first-of-type{
+     
+     padding-top:0px;
+     
+ }
+ 
+ 
+ .mobile-menu li a{
+     
+     /*color of drop down menu link background*/
+     background-color:white;
+     
+    
+          
+ }
+ 
+ .mobile-menu ul{
+      /*color of drop down menu ul list background*/
+      background-color:white;
+      
+      /*border for drop down menu*/
+      border:solid black 1px;
+      
+      /*make the menu fit the width of its container*/
+      width:100%;
+      
+      
+      /* brings the mobile menu back to the screen when it is needed*/
+      position:absolute;
+      top:0px;
+      left:0px;
+      
+     
+ }
+ 
+ 
+ .mobile-menu, .mobile-menu ul{
+    
+    /*center the drop down menu button text and the menu ul list text*/
+    text-align:center;
+    
+    /*remove the bullets*/
+    list-style-type:none;
+    
+    /*remove the default left indent of the ul list*/
+    padding:0px;
+    margin:0px;
+    
+     
+ }
+ 
+  
+ 
+
+ /*makes an image responsive*/
+.responsive-image{
+           
+  display: block;
+  height: auto;
+  max-width:100%;
+  width:100%;
+ 
+}
+
+
+
+
+
+
+
+/* responsive containter for the column classes*/
+.row{
+    
+    /*set the max width of the .row class to 
+     *to 100% so the columns within it do not exceed
+     *a sum of 100% combined 
+     */    
+    max-width:100%;
+    
+    /*keeps the .row divs next each other when the screen
+    resizes*/
+    overflow:hidden;
+     
+}
+
+.row div{
+       /* adjust the aspect of the font
+        * so it displays well and within the div elements 
+        * when the screen is resized
+        * 
+       */
+        
+       font-size-adjust: 0.45;       
+       line-height: 1.5;/*provide some spacing in between the lines*/
+      
+       float:left;/*removes spacing between in line elements*/
+       clear:none;/*removes spacing between in line elements*/
+       display:inline-block;/*make the div elements align horizonatally*/
+        
+       
+       /*styling below prevents padding and borders from breaking
+       the max-width setting of the columns*/
+       -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+       -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+        
+        /*allow long words to wrap to another line*/
+        word-wrap:break-word;
+
+        
+       
+   
+       
+}
+
+/*begin section for styling the column widths*/
+
+.column1{
+    /*this column type is used for spacing only*/
+    
+    max-width:1%;
+    width:1%;
+    
+}
+.column8{
+    
+    
+    max-width:8.3333333333333333333333333333333%;
+    width:8.3333333333333333333333333333333%;
+    
+}
+.column12{
+    
+    
+    max-width:12.5%;
+    width:12.5%;
+    
+}
+.column33{
+    
+    
+    max-width:33.333333333333333333333333333333%;
+    width:33.333333333333333333333333333333%;
+    
+}
+.column66{
+    
+    max-width:66.666666666666666666666666666667%;
+    width:66.666666666666666666666666666667%;
+    
+}
+
+
+
+.column5{
+    
+    
+    max-width:5%;
+    width:5%;
+    
+}
+.column10{
+    
+    
+    max-width:10%;
+    width:10%;
+    
+}
+.column15{
+    
+    
+    max-width:15%;
+    width:15%;
+    
+}
+.column20{
+    
+    
+    max-width:20%;
+    width:20%;
+    
+}
+.column25{
+    
+    
+    max-width:25%;
+    width:25%;
+    
+}
+.column30{
+    
+    
+    max-width:30%;
+    width:30%;
+    
+}
+.column35{
+    
+    
+    max-width:35%;
+    width:35%;
+    
+}
+.column40{
+    
+    
+    max-width:40%;
+    width:40%;
+    
+}
+.column45{
+    
+    
+    max-width:45%;
+    width:45%;
+    
+}
+.column50{
+    
+    max-width:50%;
+    width:50%;
+}
+.column55{
+    
+    max-width:55%;
+    width:55%;
+}
+.column60{
+    
+    max-width:60%;
+    width:60%;
+    
+}
+.column65{
+    
+    max-width:65%;
+    width:65%;
+}
+.column70{
+    
+    max-width:70%;
+    width:70%;
+}
+.column75{
+    
+    max-width:75%;
+    width:75%;
+}
+.column80{
+    
+    max-width:80%;
+    width:80%;
+}
+.column85{
+    
+    max-width:85%;
+    width:85%;
+}
+.column90{
+    
+    max-width:90%;
+    width:90%;
+}
+.column95{
+    
+    max-width:95%;
+    width:95%;
+}
+.column100{
+    
+    max-width:100%;
+    width:100%;
+}
+
+/*end section for styling the column widths*/
+
+
+
+
+
+         /*hides the content and eleminates the space taken up by the element
+          use this column if you want to hide elements regardless of screen size*/
+         
+        .hide{    
+            
+            visibility:hidden;/*make the content invisible*/
+            height:0px;/*make the height 0 so it doesn't take up vertical space*/
+            width:0px;/*make the width 0 so it doesn't take up horizontal space*/          
+        
+            
+        }
+
+
+
+/*Begin Media Query Section*/
+
+	/* Custom, iPhone Retina */ 
+	@media only screen and (max-width : 320px ) {/*begin media query*/
+            
+            
+             
+	    
+                        
+	}/*end media query*/
+
+	/* Extra Small Devices, Phones */ 
+	@media only screen and (max-width : 480px ) and (min-width : 320px ){/*begin media query*/
+            
+            
+           
+	}/*end media query*/
+        
+        
+
+	/* Small Devices, Tablets */
+	@media only screen and (max-width : 768px) and (min-width : 480px){/*begin media query*/
+            
+           
+            
+
+	}/*end media query*/
+
+	/* Medium Devices, Desktops */
+	@media only screen and (max-width : 992px) and (min-width : 768px){/*begin media query*/
+            
+            
+              
+ 
+
+	}/*end media query*/
+
+	/* Large Devices, Wide Screens */
+	@media only screen and (min-width : 992px){/*begin media query*/
+     
+            
+            
+	}/*end media query*/
+        
+        
+        
+        
+        
+/*end media query section*/
